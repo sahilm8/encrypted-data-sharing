@@ -12,7 +12,7 @@ const MainPage: React.FC = () => {
   }
 
   const handleAbout = () => {
-    alert('About Page - EDS (Encrypted Data Sharing)')
+    alert('Encrypted Data Sharing')
   }
 
   return (

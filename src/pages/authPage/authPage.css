@@ -50,15 +50,11 @@ body {
   margin-bottom: 15px;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-}
-
 .form-group input {
-  width: 100%;
+  width: 80%;
   padding: 10px;
   font-size: 16px;
+  font-family: 'CourierPrime-Regular', sans-serif;
   border-radius: 5px;
   border: 1px solid #00ff00;
   background-color: #000000;
@@ -101,6 +97,10 @@ body {
   .auth-button {
     font-size: 17px;
   }
+
+  .form-group input {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 1200px) {
@@ -110,6 +110,10 @@ body {
 
   .auth-button {
     font-size: 16px;
+  }
+
+  .form-group input {
+    font-size: 14px;
   }
 }
 
@@ -121,6 +125,10 @@ body {
   .auth-button {
     font-size: 15px;
   }
+
+  .form-group input {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -130,6 +138,10 @@ body {
 
   .auth-button {
     font-size: 14px;
+  }
+
+  .form-group input {
+    font-size: 12px;
   }
 }
 
@@ -149,6 +161,10 @@ body {
     padding: 20px;
     width: 95%;
   }
+
+  .form-group input {
+    font-size: 11px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -164,5 +180,9 @@ body {
   .auth-container {
     padding: 15px;
     width: 100%;
+  }
+
+  .form-group input {
+    font-size: 10px;
   }
 }
