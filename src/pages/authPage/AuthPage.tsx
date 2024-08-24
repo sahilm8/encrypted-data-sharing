@@ -1,30 +1,45 @@
-import React from 'react'
-import { useAuth0 } from '@auth0/auth0-react'
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import './authPage.css'
 
 const AuthPage: React.FC = () => {
-  const { loginWithRedirect } = useAuth0()
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const navigate = useNavigate()
 
-  const handleAuthenticate = () => {
-    loginWithRedirect()
-  }
-
-  const handleAbout = () => {
-    alert('About Page - EDS (Encrypted Data Sharing)')
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
   }
 
   return (
     <div className="auth-page">
       <div className="auth-container">
-        <h1 className="auth-heading">
-          Encrypted Data Sharing <span className="cursor">|</span>
-        </h1>
-        <button onClick={handleAuthenticate} className="auth-button">
-          Authenticate
-        </button>
-        <button onClick={handleAbout} className="auth-button">
-          About
-        </button>
+        <h1 className="auth-heading">Authenticate</h1>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit" className="auth-button">
+            Authenticate
+          </button>
+        </form>
       </div>
     </div>
   )

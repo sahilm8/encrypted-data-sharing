@@ -46,25 +46,6 @@ body {
   margin-left: 5px;
 }
 
-.form-group {
-  margin-bottom: 15px;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-}
-
-.form-group input {
-  width: 100%;
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #00ff00;
-  background-color: #000000;
-  color: #00ff00;
-}
-
 .auth-button {
   background-color: #000000;
   color: #00ff00;
