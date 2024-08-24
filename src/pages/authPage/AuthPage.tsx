@@ -9,7 +9,6 @@ const AuthPage: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle authentication logic here
   }
 
   return (
