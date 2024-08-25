@@ -4,15 +4,11 @@ import { useAuth0 } from '@auth0/auth0-react'
 import './mainPage.css'
 
 const MainPage: React.FC = () => {
-  const navigation = useNavigate()
+  const navigate = useNavigate()
   const { loginWithRedirect } = useAuth0()
 
   const handleAuthenticate = () => {
-    navigation('/auth')
-  }
-
-  const handleAbout = () => {
-    alert('Encrypted Data Sharing')
+    loginWithRedirect()
   }
 
   return (
@@ -22,7 +18,12 @@ const MainPage: React.FC = () => {
         <button onClick={handleAuthenticate} className="main-button">
           Authenticate
         </button>
-        <button onClick={handleAbout} className="main-button">
+        <button
+          onClick={() => {
+            navigate('/about')
+          }}
+          className="main-button"
+        >
           About
         </button>
       </div>
