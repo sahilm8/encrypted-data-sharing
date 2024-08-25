@@ -16,15 +16,13 @@ const MainPage: React.FC = () => {
   }
 
   return (
-    <div className="auth-page">
-      <div className="auth-container">
-        <h1 className="auth-heading">
-          Encrypted Data Sharing<span className="cursor">|</span>
-        </h1>
-        <button onClick={handleAuthenticate} className="auth-button">
+    <div className="main-page">
+      <div className="main-container">
+        <h1 className="main-heading">Encrypted Data Sharing</h1>
+        <button onClick={handleAuthenticate} className="main-button">
           Authenticate
         </button>
-        <button onClick={handleAbout} className="auth-button">
+        <button onClick={handleAbout} className="main-button">
           About
         </button>
       </div>
