@@ -5,19 +5,17 @@ import './mainPage.css'
 
 const MainPage: React.FC = () => {
   const navigate = useNavigate()
-  const { loginWithRedirect } = useAuth0()
-
-  const handleAuthenticate = () => {
-    loginWithRedirect()
-  }
+  const { loginWithRedirect, logout, isAuthenticated } = useAuth0()
 
   return (
     <div className="main-page">
       <div className="main-container">
         <h1 className="main-heading">Encrypted Data Sharing</h1>
-        <button onClick={handleAuthenticate} className="main-button">
-          Authenticate
-        </button>
+        {!isAuthenticated && (
+          <button onClick={() => loginWithRedirect()} className="main-button">
+            Authenticate
+          </button>
+        )}
         <button
           onClick={() => {
             navigate('/about')
@@ -26,6 +24,11 @@ const MainPage: React.FC = () => {
         >
           About
         </button>
+        {isAuthenticated && (
+          <button onClick={() => logout()} className="main-button">
+            Sign Out
+          </button>
+        )}
       </div>
     </div>
   )
