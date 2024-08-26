@@ -7,7 +7,7 @@ body {
   overflow: hidden;
 }
 
-.main-page {
+.profile-page {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,7 +18,7 @@ body {
   background-color: rgb(216, 216, 216);
 }
 
-.main-container {
+.profile-container {
   background-color: rgb(236, 236, 236);
   padding: 40px;
   border-radius: 12px;
@@ -28,34 +28,24 @@ body {
   max-width: 450px;
 }
 
-.main-heading {
+.profile-heading {
   font-size: 2em;
   margin-bottom: 20px;
   font-weight: 700;
   color: rgb(51, 51, 51);
-  display: inline-flex;
-  align-items: center;
 }
 
-.main-button {
-  background-color: rgb(0, 123, 255);
-  color: rgb(255, 255, 255);
-  border: none;
-  padding: 15px 25px;
-  cursor: pointer;
-  font-size: 18px;
-  font-family: 'Roboto-Regular', sans-serif;
-  border-radius: 6px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  margin: 20px auto;
-  display: block;
-  width: 90%;
-  max-width: 300px;
+.profile-image {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
 }
 
-.main-button:hover {
-  background-color: rgb(0, 86, 179);
-  transform: scale(0.98);
+.profile-info {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: rgb(51, 51, 51);
+  margin-top: 20px;
 }
 
 .loading-text {
@@ -66,12 +56,17 @@ body {
 }
 
 @media (max-width: 1440px) {
-  .main-heading {
+  .profile-heading {
     font-size: 1.8em;
   }
 
-  .main-button {
-    font-size: 17px;
+  .profile-info {
+    font-size: 1.1em;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
   }
 
   .loading-text {
@@ -80,12 +75,17 @@ body {
 }
 
 @media (max-width: 1200px) {
-  .main-heading {
+  .profile-heading {
     font-size: 1.6em;
   }
 
-  .main-button {
-    font-size: 16px;
+  .profile-info {
+    font-size: 1em;
+  }
+
+  .profile-image {
+    width: 90px;
+    height: 90px;
   }
 
   .loading-text {
@@ -94,12 +94,17 @@ body {
 }
 
 @media (max-width: 992px) {
-  .main-heading {
+  .profile-heading {
     font-size: 1.5em;
   }
 
-  .main-button {
-    font-size: 15px;
+  .profile-info {
+    font-size: 0.9em;
+  }
+
+  .profile-image {
+    width: 80px;
+    height: 80px;
   }
 
   .loading-text {
@@ -108,12 +113,17 @@ body {
 }
 
 @media (max-width: 768px) {
-  .main-heading {
+  .profile-heading {
     font-size: 1.4em;
   }
 
-  .main-button {
-    font-size: 14px;
+  .profile-info {
+    font-size: 0.8em;
+  }
+
+  .profile-image {
+    width: 70px;
+    height: 70px;
   }
 
   .loading-text {
@@ -122,18 +132,22 @@ body {
 }
 
 @media (max-width: 576px) {
-  .main-heading {
+  .profile-heading {
     font-size: 1.3em;
     margin-bottom: 15px;
   }
 
-  .main-button {
-    font-size: 13px;
-    padding: 12px 16px;
-    width: 100%;
+  .profile-info {
+    font-size: 0.8em;
+    margin: 8px 0;
   }
 
-  .main-container {
+  .profile-image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .profile-container {
     padding: 20px;
     width: 95%;
   }
@@ -144,16 +158,21 @@ body {
 }
 
 @media (max-width: 480px) {
-  .main-heading {
+  .profile-heading {
     font-size: 1.2em;
   }
 
-  .main-button {
-    font-size: 12px;
-    padding: 10px 14px;
+  .profile-info {
+    font-size: 0.7em;
+    margin: 6px 0;
   }
 
-  .main-container {
+  .profile-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .profile-container {
     padding: 15px;
     width: 100%;
   }

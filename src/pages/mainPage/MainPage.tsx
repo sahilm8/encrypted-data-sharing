@@ -5,31 +5,46 @@ import './mainPage.css'
 
 const MainPage: React.FC = () => {
   const navigate = useNavigate()
-  const { loginWithRedirect, logout, isAuthenticated } = useAuth0()
+  const { loginWithRedirect, logout, isAuthenticated, isLoading } = useAuth0()
+
+  if (isLoading) {
+  }
 
   return (
     <div className="main-page">
-      <div className="main-container">
-        <h1 className="main-heading">Encrypted Data Sharing</h1>
-        {!isAuthenticated && (
-          <button onClick={() => loginWithRedirect()} className="main-button">
-            Authenticate
+      {isLoading ? (
+        <div className="loading-text">Loading...</div>
+      ) : (
+        <div className="main-container">
+          <h1 className="main-heading">Encrypted Data Sharing</h1>
+          {!isAuthenticated && (
+            <button onClick={() => loginWithRedirect()} className="main-button">
+              Authenticate
+            </button>
+          )}
+          {isAuthenticated && (
+            <button
+              onClick={() => navigate('/profile')}
+              className="main-button"
+            >
+              Profile
+            </button>
+          )}
+          <button
+            onClick={() => {
+              navigate('/about')
+            }}
+            className="main-button"
+          >
+            About
           </button>
-        )}
-        <button
-          onClick={() => {
-            navigate('/about')
-          }}
-          className="main-button"
-        >
-          About
-        </button>
-        {isAuthenticated && (
-          <button onClick={() => logout()} className="main-button">
-            Sign Out
-          </button>
-        )}
-      </div>
+          {isAuthenticated && (
+            <button onClick={() => logout()} className="main-button">
+              Sign Out
+            </button>
+          )}
+        </div>
+      )}
     </div>
   )
 }
