@@ -15,35 +15,54 @@ const MainPage: React.FC = () => {
       {isLoading ? (
         <div className="loading-text">Loading...</div>
       ) : (
-        <div className="main-container">
-          <h1 className="main-heading">Encrypted Data Sharing</h1>
+        <>
           {!isAuthenticated && (
-            <button onClick={() => loginWithRedirect()} className="main-button">
-              Authenticate
-            </button>
+            <div className="main-container">
+              <h1 className="main-heading">Encrypted Data Sharing</h1>
+              <button
+                onClick={() => loginWithRedirect()}
+                className="main-button"
+              >
+                Authenticate
+              </button>
+              <button
+                onClick={() => {
+                  navigate('/about')
+                }}
+                className="main-button"
+              >
+                About
+              </button>
+            </div>
           )}
           {isAuthenticated && (
-            <button
-              onClick={() => navigate('/profile')}
-              className="main-button"
-            >
-              Profile
-            </button>
+            <div className="main-container">
+              <h1 className="main-heading">Encrypted Data Sharing</h1>
+              <button
+                onClick={() => navigate('/profile')}
+                className="main-button"
+              >
+                Profile
+              </button>
+              <button
+                onClick={() => {
+                  navigate('/about')
+                }}
+                className="main-button"
+              >
+                About
+              </button>
+              <button
+                onClick={() => {
+                  logout()
+                }}
+                className="main-button"
+              >
+                Log out
+              </button>
+            </div>
           )}
-          <button
-            onClick={() => {
-              navigate('/about')
-            }}
-            className="main-button"
-          >
-            About
-          </button>
-          {isAuthenticated && (
-            <button onClick={() => logout()} className="main-button">
-              Sign Out
-            </button>
-          )}
-        </div>
+        </>
       )}
     </div>
   )
