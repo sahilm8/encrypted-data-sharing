@@ -13,8 +13,3 @@ your data is safe from unauthorized access.
 - React.js
 - Redux
 - Auth0
-- Java
-- Spring
-- MySQL
-- Docker
-- AWS
