@@ -14,6 +14,6 @@ your data is safe from unauthorized access.
 
 - TypeScript
 - React.js
-- React Query
+- React Router
 - Redux
 - Auth0
